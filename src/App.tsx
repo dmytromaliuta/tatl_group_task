@@ -58,7 +58,7 @@ function App() {
       setFormattedStudents(data);
     }
   }, [students, rates]);
-  console.log(data)
+  
   return (
     <>
       <StudentsTable columns={columns} data={data} />
