@@ -41,7 +41,7 @@ function App() {
   }, [dispatch])
 
   useEffect(() => {
-    if (students.length > 0 && rates.length > 0) {
+    if (students.length > 0) {
       let data = students.map((item: Student, index: number) => {
         let student:StudentFields = {
           id: ++index,
@@ -58,7 +58,7 @@ function App() {
       setFormattedStudents(data);
     }
   }, [students, rates]);
-
+  console.log(data)
   return (
     <>
       <StudentsTable columns={columns} data={data} />
